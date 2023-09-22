@@ -1,19 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package supermercato;
 
-/**
- *
- * @author luca.giacomoni
- */
 public class Supermercato {
 
     private String nome;
     private String indirizzo;
     private Prodotto[] prodotti;
+    private int dimL;
 
     public Supermercato(String nome, String indirizzo, double[] prezzo, int[] iva, double[] peso, double[] tara, String[] descrizione, String[] codice) {
         this.nome = nome;
@@ -40,6 +32,26 @@ public class Supermercato {
             }
         }
         return prodotti[c].getDescrizione() + " ha il prezzo ivato piu' alto: " + prodotti[c].prezzoIvato();
+    }
+
+    public void addProdotto(Prodotto pAdd) {
+        if (dimL >= this.prodotti.length) {
+            prodotti[dimL] = pAdd;
+            dimL++;
+        }
+    }
+
+    public void addProd(double prezzo, int iva, double peso, double tara, String descrizione, String codice) {
+        Prodotto p = new Prodotto(prezzo, iva, peso, tara, descrizione, codice);
+        addProdotto(p);
+    }
+
+    private void resize() {
+        Prodotto[] prodottiCopia = new Prodotto[prodotti.length + (int) (prodotti.length * 0.20)];
+        for (int i = 0; i < prodotti.length; i++) {
+            prodottiCopia[i] = prodotti[i];
+        }
+        prodotti = prodottiCopia;
     }
 
     public double valoreMerce() {

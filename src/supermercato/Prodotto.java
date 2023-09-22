@@ -18,6 +18,17 @@ public class Prodotto {
         this.codice = codice;
 
     }
+    
+    public Prodotto(Prodotto p){
+        this.prezzo = p.prezzo;
+        this.tara = p.tara;
+        this.descrizione = p.descrizione;
+        this.peso = p.peso;
+        this.tara = p.tara;
+        this.codice = p.codice;
+        
+        
+    }
 
     public String getDescrizione() {
         return descrizione;
@@ -53,23 +64,29 @@ public class Prodotto {
         int resto;
         boolean ris = false;
 
-        for (int i = 0; i < codice.length() - 2; i += 2) {
+        for (int i = codice.length() - 1; i > 1; i -= 2) {
 
-            somma += codice.charAt(i) - '0' * 3;
-        }
-        for (int i = 1; i < codice.length() - 2; i += 2) {
+            somma += (codice.charAt(i) - '0') * 3;
 
-            somma += codice.charAt(i) - '0' * 1;
         }
+        System.out.println(somma);
+
+        for (int i = codice.length() - 2; i > 0; i -= 2) {
+
+            somma += codice.charAt(i) - '0';
+
+        }
+        System.out.println(somma);
 
         resto = somma % 10;
 
-        if (codice.charAt(12) == resto) {
+        if ((codice.charAt(0) - '0') == resto) {
             ris = true;
         }
 
         return ris;
     }
+    
 
     public String stampa() {
 
