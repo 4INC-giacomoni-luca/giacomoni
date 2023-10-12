@@ -31,7 +31,7 @@ public class Supermercato {
                 c = i;
             }
         }
-        return prodotti[c].getDescrizione() + " ha il prezzo ivato piu' alto: " + prodotti[c].prezzoIvato();
+        return prodotti[c].getDescrizione();
     }
 
     public void addProdotto(Prodotto pAdd) {
