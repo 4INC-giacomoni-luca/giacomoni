@@ -22,8 +22,4 @@ public class Azienda {
 
     }
     
-    public void addProdotto(Prodotto[] pAdd,int indice){
-        
-        
-    }
 }
