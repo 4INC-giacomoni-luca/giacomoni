@@ -52,7 +52,7 @@ public class Condominio {
     }
 
     private void shiftSx(int indice) {
-        for (int i = indice; i < AppartamentiTot - 1; i++) {
+        for (int i = indice + 1; i < AppartamentiTot - 1; i++) {
             appartamenti[i - 1] = appartamenti[i];
         }
     }
