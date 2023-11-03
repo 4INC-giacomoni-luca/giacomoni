@@ -5,9 +5,13 @@ public class Classe {
     private Studente capoClasse;
     private Studente[] studenti;
 
-    public Classe(Studente capoClasse, Studente[] studenti) {
-        this.capoClasse = capoClasse;
-        this.studenti = studenti;
+    public Classe(Studente capoClasse, Studente[] studenti) throws Exception {
+        this.studenti = new Studente[studenti.length];
+        for (int i = 0; i < studenti.length; i++) {
+            this.studenti[i] = new Studente(studenti[i]);
+
+        }
+        setCapoClasse(capoClasse);
     }
 
     public Studente getCapoClasse() {
@@ -26,11 +30,19 @@ public class Classe {
         this.studenti = studenti;
     }
 
-    public void invertiAttributi() {
+    public void invertiAttributi() throws Exception {
 
-        Studente var = capoClasse;
-        capoClasse = studenti[0];
-        studenti[0] = var;
+        String nome = studenti[0].getNome();
+
+        try {
+
+            studenti[0].setNome(studenti[0].getCognome());
+            studenti[0].setCognome(nome);
+
+        } catch (Exception e) {
+            throw new Exception("Non è stato effettuato lo scambio");
+        }
+
     }
 
     public String toString() {
