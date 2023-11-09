@@ -16,6 +16,11 @@ public class Condominio {
         }
     }
 
+  
+
+    
+    
+
     public String getNome() {
         return nome;
     }
