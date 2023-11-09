@@ -21,7 +21,7 @@ public class Studente {
         this.nome = controllo(nome);
     }
 
-    public void setCognome(String cognome)throws Exception {
+    public final void setCognome(String cognome)throws Exception {
         this.cognome = controllo(cognome);
     }
     
