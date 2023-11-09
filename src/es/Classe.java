@@ -31,16 +31,16 @@ public class Classe {
     }
 
     public void invertiAttributi() throws Exception {
+        String cognome = capoClasse.getNome();
+        String nome = capoClasse.getCognome();
+        capoClasse.setCognome(cognome);
+        capoClasse.setNome(nome);
 
-        String nome = studenti[0].getNome();
-
-        try {
-
-            studenti[0].setNome(studenti[0].getCognome());
-            studenti[0].setCognome(nome);
-
-        } catch (Exception e) {
-            throw new Exception("Non è stato effettuato lo scambio");
+        for (int i = 0; i < studenti.length; i++) {
+            cognome = studenti[i].getNome();
+            nome = studenti[i].getCognome();
+            studenti[i].setCognome(cognome);
+            studenti[i].setNome(nome);
         }
 
     }
