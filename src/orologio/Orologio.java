@@ -28,6 +28,16 @@ public class Orologio {
         return String.format("%02d:%02d:%02d", ora, minuti, secondi);
     }
 
+    public void aggiungiOre(int nOre) {
+
+        ora += nOre;
+        while (ora >= 24) {
+            ora -= 24;
+
+        }
+
+    }
+
     public String toString() {
         String t = "";
 

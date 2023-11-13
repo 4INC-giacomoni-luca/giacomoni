@@ -9,22 +9,16 @@ public class OrologioDigitale extends Orologio {
     public String dammiOrario(int tipo) {
         int var = getOra();
         String testo = "";
-        String t = "";
+        String t = "AM";
 
-        if (tipo == 12 || tipo == 24) {
-
-            if (tipo == 12) {
-                if (getOra() > 12) {
-                    var = var - 12;
-                    t = "PM";
-                } else {
-                    t = "AM";
-                }
-                testo += String.format("%02d:%02d:%02d" + t, var, getMinuti(), getSecondi(), t);
-            } else {
-                testo = super.dammiOrario();
+        if (tipo == 12) {
+            if (var > 12) {
+                var -= 12;
+                t = "PM";
             }
-
+            testo += String.format("%02d:%02d:%02d %s", var % 12, getMinuti(), getSecondi(), t);
+        } else {
+            testo += super.dammiOrario();
         }
 
         return testo;

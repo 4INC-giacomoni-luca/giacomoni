@@ -1,4 +1,4 @@
-package esempioEccezioni;
+package esEccezioni;
 
 import java.util.Scanner;
 

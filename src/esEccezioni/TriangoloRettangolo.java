@@ -1,4 +1,4 @@
-package esempioEccezioni;
+package esEccezioni;
 
 /**
  * La classe TriangoloRettangolo serve per calcolare perimetro e area di un
