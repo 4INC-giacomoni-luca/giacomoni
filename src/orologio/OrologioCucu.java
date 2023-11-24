@@ -13,7 +13,6 @@ public class OrologioCucu extends Orologio {
         this.carillon = carillon;
     }
     
-
     @Override
     public String toString() {
         return super.toString();

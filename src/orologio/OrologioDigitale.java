@@ -16,7 +16,7 @@ public class OrologioDigitale extends Orologio {
                 var -= 12;
                 t = "PM";
             }
-            testo += String.format("%02d:%02d:%02d %s", var % 12, getMinuti(), getSecondi(), t);
+            testo += String.format("%02d:%02d:%02d %s", var, getMinuti(), getSecondi(), t);
         } else {
             testo += super.dammiOrario();
         }

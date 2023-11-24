@@ -41,6 +41,7 @@ public class Prodotto {
     public double getTara() {
         return tara;
     }
+    
 
     public String toString() {
 

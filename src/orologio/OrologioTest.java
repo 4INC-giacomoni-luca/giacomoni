@@ -8,7 +8,7 @@ public class OrologioTest {
         OrologioDigitale d = new OrologioDigitale(01, 5, 8);
         OrologioCucu c = new OrologioCucu(12, 0, 0, true);
 
-        Orologio[] arrayOrologi = {o, d, c};
+        Orologio[] arrayOrologi = {new Orologio(13, 5, 8), new OrologioDigitale(01, 5, 8), new OrologioCucu(12, 0, 0, true)};
 
         for (Orologio orologio : arrayOrologi) {
             System.out.println("Orologio: " + orologio.dammiOrario());
@@ -22,7 +22,7 @@ public class OrologioTest {
         for (Orologio orologio : arrayOrologi) {
             System.out.println("Orologio dopo: " + orologio.dammiOrario());
         }
-
+        /*
         System.out.println("\n");
 
         System.out.println("Orologio: " + o.dammiOrario());
@@ -35,6 +35,6 @@ public class OrologioTest {
 
         System.out.println("\nOrologio dopo: " + o.dammiOrario());
         System.out.println("Orologio Digitale dopo: " + d.dammiOrario(12));
-        System.out.println("Orologio Cucu dopo: " + c.dammiOrario());
+        System.out.println("Orologio Cucu dopo: " + c.dammiOrario());*/
     }
 }
