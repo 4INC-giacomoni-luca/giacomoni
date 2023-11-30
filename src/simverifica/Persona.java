@@ -16,6 +16,7 @@ public class Persona {
     private static int numeroIstanze = 0;
 
     public Persona(String cognome, String nome, String codFisc, String dataDiNascita) throws Exception {
+        this.codFisc = codFisc;
         setNome(nome);
         setCognome(cognome);
         setDataDiNascita(dataDiNascita);
@@ -60,10 +61,13 @@ public class Persona {
         SimpleDateFormat var = new SimpleDateFormat("dd/MM/yyyy");
         try {
             Date data = var.parse(dataDiNascita);
+            this.dataDiNascita = dataDiNascita;
         } catch (ParseException e) {
             throw new Exception("Formato data di nascita non valido");
+        } catch (Exception e) {
+            throw new Exception("");
+
         }
-        this.dataDiNascita = dataDiNascita;
     }
 
     public String getDataDiNascita() {
