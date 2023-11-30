@@ -8,6 +8,7 @@ public class Test {
         Persona persona2 = new Persona("Bianchi", "Luca", "BNCLCU90M02H456Y", "15/05/2022");
 
         try {
+
             System.out.println(persona1.toString());
             System.out.println(persona2.toString());
 

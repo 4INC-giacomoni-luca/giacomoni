@@ -2,7 +2,6 @@ package simverifica;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -59,14 +58,11 @@ public class Persona {
 
     public final void setDataDiNascita(String dataDiNascita) throws Exception {
         SimpleDateFormat var = new SimpleDateFormat("dd/MM/yyyy");
+        var.setLenient(false);
         try {
-            Date data = var.parse(dataDiNascita);
-            this.dataDiNascita = dataDiNascita;
+            var.parse(dataDiNascita);
         } catch (ParseException e) {
-            throw new Exception("Formato data di nascita non valido");
-        } catch (Exception e) {
-            throw new Exception("");
-
+            throw new Exception("La data di nascita non è valida.");
         }
     }
 
