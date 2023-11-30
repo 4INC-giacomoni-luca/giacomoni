@@ -8,7 +8,7 @@ public class TriangoloRettangoloTest {
         Scanner in = new Scanner(System.in);        
 
         try {
-            TriangoloRettangolo t = new TriangoloRettangolo(10, 20.0, 30.0, "rosso", "aa12");
+            TriangoloRettangolo t = new TriangoloRettangolo(100000, 20.0, 30.0, "blu", "flhl43er");
             
             
                    

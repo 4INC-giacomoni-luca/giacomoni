@@ -127,7 +127,7 @@ public class TriangoloRettangolo {
     public void setId(String id) throws Exception {
         try {
             if (!id.isEmpty()) {                
-                id.substring(10);
+                id.substring(1000);
                 Integer.parseInt(id);
                 this.id = id;
             } else {
