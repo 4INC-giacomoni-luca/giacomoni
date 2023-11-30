@@ -61,9 +61,12 @@ public class Persona {
         var.setLenient(false);
         try {
             var.parse(dataDiNascita);
+
         } catch (ParseException e) {
             throw new Exception("La data di nascita non è valida.");
         }
+        this.dataDiNascita = dataDiNascita;
+
     }
 
     public String getDataDiNascita() {
@@ -96,6 +99,7 @@ public class Persona {
             throw new Exception("Errore nella conversione della data");
 
         }
+
     }
 
     @Override

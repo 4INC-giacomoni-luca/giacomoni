@@ -4,8 +4,8 @@ public class Test {
 
     public static void main(String[] args) throws Exception {
 
-        Persona persona1 = new Persona("Rossi", "Mario", "RSSMRA80M01H501Z", "20/05/2025");
-        Persona persona2 = new Persona("Bianchi", "Luca", "BNCLCU90M02H456Y", "15/05/2022");
+        Persona persona1 = new Persona("Rossi", "Mario", "RSSMRA80M01H501Z", "01/11/2023");
+        Persona persona2 = new Persona("Bianchi", "Luca", "BNCLCU90M02H456Y", "15/05/2000");
 
         try {
 
