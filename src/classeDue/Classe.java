@@ -11,16 +11,15 @@ public class Classe {
     }
 
     public boolean controllaOmonimia(Studente s) {
+
+        boolean t = false;
+
         for (Studente st : studenti) {
             if (st.equals(s)) {
-                return true;
+                t = true;
             }
         }
-        return false;
-    }
-
-    public int hashCode(int pos) {
-        return studenti[pos].hashCode();
+        return t;
     }
 
     public void setCapoClasse(Studente capoClasse) {
