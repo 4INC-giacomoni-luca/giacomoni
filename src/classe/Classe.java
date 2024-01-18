@@ -44,7 +44,7 @@ public class Classe {
 
     public final void setStudenti(Studente[] studenti) {
 
-        //poichÃ¨ si ripete la stessa operazione del metodo get potrebbe essere creato un metodo privato per la copia del vettore
+        //poichè¨ si ripete la stessa operazione del metodo get potrebbe essere creato un metodo privato per la copia del vettore
         Studente[] temp = new Studente[studenti.length];
 
         for (int i = 0; i < temp.length; i++) {
