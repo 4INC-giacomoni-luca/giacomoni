@@ -3,7 +3,7 @@ package classe;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Studente {
+public class Studente implements Comparable<Studente> {
 
     private String cognome;
     private String nome;
@@ -17,6 +17,20 @@ public class Studente {
     public Studente(String cognome, String nome) throws Exception {
         setCognome(cognome);
         setNome(nome);
+    }
+
+    @Override
+    public int compareTo(Studente altroStudente) {
+        int var = 0;
+
+        if (this.nome.compareTo(altroStudente.nome) == 0) {
+            var = this.cognome.compareTo(altroStudente.cognome);
+
+        } else {
+            var = this.nome.compareTo(altroStudente.nome);
+
+        }
+        return var;
     }
 
     public void aggiungiVoto(float voto) {
